@@ -41,13 +41,13 @@ function DetailPage() {
 
   return (
     <div>
-      <div className="mx-72 px-10 pb-10 bg-white border border-gray-200 rounded-lg shadow">
-        <div className="flex mt-10">
+      <div className="md:mx-72 px-10 pb-10 bg-white border border-gray-200 rounded-lg shadow">
+        <div className="block md:flex mt-10">
           <div className="flex-none w-[400px]">
             <ThreadComponent data={thread} key={thread.id} />
 
           </div>
-          <div className="flex-1">
+          <div className="bloc md:flex-1">
             <CommentTreeComponent comments={comments} thread_id={thread.id} id={id}/>
           </div>
         </div>

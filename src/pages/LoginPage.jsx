@@ -6,9 +6,10 @@ import InputLogin from '../components/auth/InputLogin';
 function LoginPage({ loginSuccess }) {
   const onLogin = async ({ email, password }) => {
     const { error, data } = await login({ email, password });
-    alert(data)
     if (!error) {
       loginSuccess({accessToken: data});
+    } else {
+      alert('Email atau password salah!');
     }
   };
 
@@ -24,10 +25,6 @@ function LoginPage({ loginSuccess }) {
                       Masuk menggunakan akun anda
                   </h1>
                   <InputLogin login={onLogin} />
-
-                  {/* <form className="space-y-4 md:space-y-6" action="#">
-                      
-                  </form> */}
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                     Belum punya akun? <Link to="/register" className="font-medium text-primary-600 hover:underline dark:text-primary-500">daftar</Link>
                   </p>

@@ -24,9 +24,6 @@ function RegisterPage() {
                       Masuk data akun anda
                   </h1>
                   <InputRegister register={onRegisterHandler} />
-                  {/* <form className="space-y-4 md:space-y-6" action="#">
-                      
-                  </form> */}
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                     Sudah punya akun? <Link to="/" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login</Link>
                   </p>

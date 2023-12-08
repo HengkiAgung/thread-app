@@ -5,7 +5,7 @@ import SearchBar from '../components/SearchBar';
 import ThreadListComponent from '../components/thread/ThreadListComponent';
 import AddThreadButton from '../components/buttons/AddThreadButton';
 
-function HomePage() {
+function MentionPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [threads, setThreads] = useState([]);
   const [keyword, setKeyword] = useState(() => searchParams.get('keyword') || '');
@@ -49,4 +49,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default MentionPage;
